@@ -1,0 +1,392 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.tariffs-grid {
+    width: 100%;
+    max-width: 1156px;
+    margin: 0 auto;
+    padding: 40px 0px;
+}
+
+.tariffs-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tariffs-desc {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    color: rgba(78, 93, 124, 0.5);
+    text-align: center;
+    width: 920px;
+    max-width: 100%;
+    margin: 0 auto 40px;
+}
+
+.tariffs-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 карточки равной ширины */
+    gap: 24px;
+    /* justify-content: stretch; — опционально, обычно по умолчанию */
+}
+
+.tariff-card {
+    width: 100%;
+    /* занимает всю ширину своей grid-ячейки */
+    min-width: 0;
+    /* разрешает "сжиматься" внутри grid */
+    box-sizing: border-box;
+    /* далее твой привычный набор стилей */
+    /* min-height: 507px;
+    height: auto; */
+    height: 507px;
+    border-radius: 8px;
+    box-shadow: none;
+    position: relative;
+    background: transparent;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    transition: background 0.2s, box-shadow 0.2s;
+
+}
+
+.tariff-card:hover {
+    box-shadow: 0 4px 24px #8d97bf22;
+    background: #f1f0ff;
+    cursor: pointer;
+}
+
+.tariff-card.third {
+    background: #357efe;
+
+}
+
+.tariff-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 120%;
+    margin: 0;
+    white-space: nowrap;
+    color: #000;
+}
+
+.tariff-card.third .tariff-title {
+    color: #fff;
+}
+
+.tariff-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    color: rgba(78, 93, 124, 0.5);
+    margin: 0;
+}
+
+.tariff-card.third .tariff-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.tariff-cost,
+.tariff-per-month {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 120%;
+    color: #4E5D7C;
+}
+
+.tariff-card.third .tariff-cost,
+.tariff-card.third .tariff-per-month,
+.tariff-card.third .tariff-profit {
+    color: #fff;
+}
+
+.tariff-profit {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 120%;
+    color: #4E5D7C;
+    gap: 8px;
+}
+
+.tariff-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 140%;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: #1ABC9C;
+    border-radius: 8px;
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+    height: 29px;
+    letter-spacing: 0;
+}
+
+.tariff-badge span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    margin-left: 2px;
+}
+
+
+.tariff-badge-profit {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 120%;
+    color: #FFFFFF;
+    background: #FFC736;
+    padding: 2px 10px;
+    border-radius: 8px;
+    margin-left: 32px;
+    width: 99px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+
+.tariff-card.second .tariff-badge-profit {
+    margin-left: 52.36px;
+}
+
+.tariff-card.third .tariff-badge-profit {
+    margin-left: 67.77px;
+}
+
+
+/*       */
+
+/* .tariff-bottom {
+    background: rgba(181, 184, 18, 0.389);
+    padding: 0;
+}
+ */
+
+.tariff-card.first .tariff-inner {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    /* auto - top, auto - middle, 1fr - растяжимый пустой ряд, auto - bottom */
+    height: 100%;
+    background: #fff;
+    border-radius: 16px;
+    margin: 93px 40px 48px 40px;
+    /* верхний margin по макету */
+    height: calc(100% - 93px - 48px);
+    box-shadow: 0 2px 12px #0001;
+    /* border: 1px solid red;
+ */}
+
+.tariff-card.first .tariff-top {
+    display: grid;
+    gap: 16px;
+    /* отступ между названием и текстом */
+    margin-bottom: 50px;
+    /* отступ вниз по макету */
+}
+
+.tariff-card.first .tariff-middle {
+    display: grid;
+    gap: 32.4px;
+    /* по макету */
+    margin-bottom: 40px;
+}
+   
+/* .tariff-card.first .tariff-cost {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 28px;
+} */
+
+.tariff-card.first .tariff-cost {
+    display: grid;
+    grid-template-columns: 160px 62px;
+    align-items: center;
+    column-gap: 28px;
+    /* ширина родителя: 160 + 28 + 62 = 250px,
+       если родителю нужно фикс.ширину, поставьте width: 250px; */
+}
+
+.tariff-card.first .tariff-profit {
+    display: grid;
+    grid-template-columns: 116px 28px;
+    align-items: center;
+    column-gap: 72px;
+}
+
+.tariff-card.first .tariff-per-month {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tariff-card.first .tariff-bottom {
+    /* Автоматически прижмется к нижнему краю карточки */
+}
+
+.tariff-card.second .tariff-inner {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    /* auto - .tariff-top, auto - .tariff-middle, 1fr - растяжка, auto - .tariff-bottom */
+    height: 100%;
+    background: #fff;
+    border-radius: 16px;
+    margin: 48px 40px;
+    height: calc(100% - 48px - 48px);
+    box-shadow: 0 2px 12px #0001;
+}
+
+.tariff-card.second .tariff-top {
+    display: grid;
+    gap: 16px;
+    padding-top: 45px;
+    /* или сколько по макету */
+    position: relative;
+        /* для бейджа */
+    margin-bottom: 50px;
+}
+
+.tariff-card.second .tariff-middle {
+    display: grid;
+    gap: 24.6px;
+    /* по макету */
+    margin-bottom: 40px;
+}
+
+.tariff-card.second .tariff-cost {
+    display: grid;
+    grid-template-columns: 160px 65px;
+    align-items: center;
+    column-gap: 27px;
+}
+
+.tariff-card.second .tariff-profit {
+    display: grid;
+    grid-template-columns: 116.23px 70.77px;
+    align-items: center;
+}
+
+.tariff-card.second .tariff-badge-profit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99px;
+    /* ширина только текста! */
+    height: 36px;
+    /* или 8 + высота текста + 8 по макету */
+    padding: 8px 16px;
+    /* отступы вокруг текста */
+    background: #FFC736;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+}
+/* .tariff-card.second .tariff-profit {
+    display: grid;
+    grid-template-columns: 116px 67px;
+    align-items: center;
+    column-gap: 71px;
+} */
+/* .tariff-card.second .tariff-cost, */
+/* .tariff-card.second .tariff-profit, */
+.tariff-card.second .tariff-per-month {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tariff-card.third .tariff-inner {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100%;
+    background: #357EFE;
+    color: #fff;
+    border-radius: 16px;
+    margin: 48px 40px 48px 40px;
+    /* скорректируйте по макету, если требуется */
+    height: calc(100% - 48px - 48px);
+    box-shadow: 0 2px 12px #0001;
+}
+
+.tariff-card.third .tariff-top {
+    display: grid;
+    gap: 16px;
+    padding-top: 45px;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.tariff-card.third .tariff-middle {
+    display: grid;
+    gap: 24.6px;
+    margin-bottom: 34px;
+}
+
+.tariff-card.third .tariff-cost {
+    display: grid;
+    grid-template-columns: 160px 70px;
+    align-items: center;
+    column-gap: 40px;
+}
+
+/* .tariff-card.third .tariff-cost, */
+.tariff-card.third .tariff-profit,
+.tariff-card.third .tariff-per-month {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tariff-btn {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0;
+    background: #357EFE;
+    color: #FFFFFF;
+    border-radius: 47px;
+    border: none;
+    cursor: pointer;
+    /* margin: 0; */
+    box-sizing: border-box;
+}
+
+.tariff-card.third .tariff-btn {
+    background: #fff;
+    color: #357EFE;
+}
