@@ -1,0 +1,337 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/***** Секция тарифов *****/
+.tariffs {
+    width: 100%;
+    max-width: 1156px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.tariffs__title {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tariffs__desc {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    color: rgba(78, 93, 124, 0.5);
+    text-align: center;
+    width: 920px;
+    max-width: 100%;
+    margin: 0 auto 40px;
+}
+
+.tariffs__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/***** Карточка тарифов *****/
+.tariff-card {
+    min-width: 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: transparent;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    transition: background 0.2s, box-shadow 0.2s;
+    min-height: 507px;
+
+}
+
+.tariff-card:hover {
+    box-shadow: 0 4px 24px #8d97bf22;
+    background: #f1f0ff;
+    cursor: pointer;
+}
+
+.tariff-card--third {
+    background: #357efe;
+}
+
+.tariff-card__inner {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100%;
+    background: #fff;
+    border-radius: 16px;
+    margin: 48px 40px;
+    box-shadow: 0 2px 12px #0001;
+    box-sizing: border-box;
+}
+
+.tariff-card--first .tariff-card__inner {
+    margin: 93px 40px 48px 40px;
+    height: calc(100% - 93px - 48px);
+}
+
+.tariff-card--second .tariff-card__inner {
+    height: calc(100% - 48px - 48px);
+}
+
+.tariff-card--third .tariff-card__inner {
+    height: calc(100% - 48px - 48px);
+    background: #357efe;
+}
+
+.tariff-card__top {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.tariff-card--second .tariff-card__top,
+.tariff-card--third .tariff-card__top {
+    padding-top: 45px;
+    
+}
+
+.tariff-card--third .tariff-card__top {
+    margin-bottom: 32px;
+}
+
+
+.tariff-card__title {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 120%;
+    color: #000;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.tariff-card--third .tariff-card__title {
+    color: #fff;
+}
+
+.tariff-card__text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    color: rgba(78, 93, 124, 0.5);
+    margin: 0;
+}
+
+.tariff-card--third .tariff-card__text {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tariff-card__middle {
+    display: grid;
+    gap: 24.6px;
+    margin-bottom: 34px;
+}
+.tariff-card--first .tariff-card__middle {
+    display: grid;
+    gap: 33px;
+    margin-bottom: 40px;
+}
+
+.tariff-card__cost,
+.tariff-card__profit,
+.tariff-card__per-month {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    
+}
+
+.tariff-card__cost {
+    grid-template-columns: 160px 62px;
+    column-gap: 28px;
+}
+
+.tariff-card--third .tariff-card__cost {
+    grid-template-columns: 160px 70px;
+    column-gap: 40px;
+}
+
+.tariff-cost,
+.tariff-per-month {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 120%;
+    color: #4E5D7C;
+}
+
+.tariff-card__cost-label,
+.tariff-card__per-month-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 120%;
+    color: #4E5D7C;
+}
+
+.tariff-card__cost-value,
+.tariff-card__per-month-value {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 120%;
+    color: #4E5D7C;
+    white-space: nowrap;
+    text-align: right;
+    
+}
+
+.tariff-card__profit {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 120%;
+    color: #4E5D7C;
+    gap: 8px;
+}
+.tariff-card--second .tariff-card__profit,
+.tariff-card--third .tariff-card__profit {
+    display: grid;
+    grid-template-columns: 116.23px 1fr;
+    align-items: center;
+}
+
+
+.tariff-card--second .tariff-card__badge-profit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 67px;
+    /* ширина только текста! */
+    height: 36px;
+    /* или 8 + высота текста + 8 по макету */
+    padding: 8px 16px;
+    /* отступы вокруг текста */
+    background: #FFC736;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #fff;
+    white-space: nowrap;
+    justify-self: end;
+    margin-right: 19px;
+}
+
+.tariff-card--third .tariff-card__badge-profit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 75px;
+    /* ширина только текста! */
+    height: 36px;
+    /* или 8 + высота текста + 8 по макету */
+    padding: 8px 16px;
+    /* отступы вокруг текста */
+    background: #FFC736;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #fff;
+    white-space: nowrap;
+    justify-self: end;
+
+}
+
+.tariff-card__badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 140%;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: #1ABC9C;
+    border-radius: 8px;
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+    height: 29px;
+    letter-spacing: 0;
+}
+
+.tariff-card__badge span {
+    font-weight: 800;
+    font-size: 15px;
+    margin-left: 2px;
+}
+
+.tariff-card__per-month {
+    grid-template-columns: 160px 62px;
+    column-gap: 28px;
+}
+
+.tariff-card--third .tariff-card__per-month {
+    grid-template-columns: 168.58px 88px;
+    column-gap: 31.61px;
+}
+
+.tariff-card__per-month-label {
+    color: #4E5D7C;
+}
+
+.tariff-card__per-month-value {
+    color: #4E5D7C;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.tariff-card--third .tariff-card__cost-label,
+.tariff-card--third .tariff-card__cost-value,
+.tariff-card--third .tariff-card__profit,
+.tariff-card--third .tariff-card__per-month-label,
+.tariff-card--third .tariff-card__per-month-value {
+    color: #fff;
+}
+
+.tariff-card__bottom {
+    margin-top: auto;
+}
+
+.tariff-card__btn {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0;
+    background: #357EFE;
+    color: #fff;
+    border-radius: 47px;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.tariff-card--third .tariff-card__btn {
+    background: #fff;
+    color: #357EFE;
+}
