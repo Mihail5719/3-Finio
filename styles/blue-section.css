@@ -1,0 +1,692 @@
+.blue-section {
+    position: absolute;
+    top: 3267px;
+    /* значение для десктоп */
+    left: 0;
+    width: 1920px;
+    height: 1453px;
+    background: #357EFE;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.blue-section__title {
+    position: absolute;
+    /* Figma: top: 3387px; left: 538px; width: 845px
+    Применено: top/left/width для совпадения при overlay Pixel Perfect */
+    top: 120px;
+    left: 528px;
+    width: 866px;
+    height: 58px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+/* Описание */
+.blue-section__desc {
+    position: absolute;
+    /* Figma: top: 3469px; 
+    Применено: top для совпадения при overlay Pixel Perfect */
+    top: 201px;
+    left: 382px;
+    width: 1156px;
+    height: 50px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: 0;
+}
+
+/* Кнопка */
+.blue-section__btn {
+    position: absolute;
+    /* Figma: top: 3559px; 
+        Применено: top для совпадения при overlay Pixel Perfect */
+    top: 292px;
+    left: 788px;
+    width: 345px;
+    height: 48px;
+    /* Figma: padding: 12px 32px;
+    Применено: padding для совпадения при overlay Pixel Perfect */
+    padding: 0;
+    border-radius: 34px;
+    background: #fff;
+    color: #357EFE;
+    font-size: 17px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    line-height: 140%;
+    border: none;
+    cursor: pointer;
+}
+
+.report-preview-block {
+    position: absolute;
+    /* Figma: top: 3671px; left: 382px; 
+    Применено: top/left для совпадения при overlay Pixel Perfect */
+    top: 404px;
+    left: 381px;
+    width: 1156px;
+    height: 640px;
+    border-radius: 12.84px;
+    background: #fff;
+    box-shadow: 0 0 32px 0 rgba(78, 93, 124, 0.32);
+    display: flex;
+}
+
+.report-preview-block__divider {
+    position: absolute;
+    top: 3671px;
+    left: 978px;
+    width: 2px;
+    height: 640px;
+    background: #357EFE;
+    z-index: 5;
+}
+
+/* Навигационный круг со стрелками */
+.report-preview-block__nav {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 298px;
+    left: 578px;
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.report-preview-block__ellipse {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 32px 0 rgba(78, 93, 124, 0.32);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.report-preview-block__nav-icon {
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    top: 15px;
+    /* 3986-3971 = 15px */
+    color: #357EFE;
+    z-index: 2;
+}
+
+.report-preview-block__nav-icon--left {
+    left: 8px;
+    /* (967-959) = 8px */
+}
+
+.report-preview-block__nav-icon--right {
+    left: 26px;
+    /* (985-959) = 26px */
+}
+
+
+.report-preview-block__image {
+    /* Figma: width: 508px; padding: 16px 0 16px 16px;
+    Применено: width/padding для совпадения при overlay Pixel Perfect */
+    width: 598px;
+    height: 640px;
+    overflow: hidden;
+    padding: 0;
+    background: #fff;
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+}
+
+.report-preview-block__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px 0 0 16px;
+    display: block;
+}
+
+
+
+.report-preview-block__chart {
+    overflow: hidden;
+    border-radius: 0 12.84px 12.84px 0;
+    position: relative;
+}
+
+.report-preview-block__chart-img {
+    /* Figma: width: 648px; height: 640px;
+    Применено: width/height для совпадения при overlay Pixel Perfect */
+    width: 593px;
+    height: 706px;
+    object-fit: cover;
+    object-position: right -34px;
+    display: block;
+    border-radius: 0 12.84px 12.84px 0;
+}
+
+/* Excel/FINIO секция */
+.stats-block {
+    position: absolute;
+    background: #357EFE;
+    top: 1108px;
+    /* top: 4375px; */
+    left: 500px;
+    width: 920px;
+    height: 225px;
+    display: flex;
+    gap: 24px;
+}
+
+.stats-block__card,
+.finio-block__card {
+    width: 448px;
+    height: 225px;
+    /* В Figma у блока Fill: #fff, но визуально и по overlay блок синий (#357EFE).
+    Сделал фон .stats-block__card синим для pixel perfect соответствия макету. */
+    background: #357EFE;
+    /* background: #fff; */
+    border-radius: 16px;
+    box-shadow: 0 0 32px 0 rgba(78, 93, 124, 0.16);
+    padding: 0;
+    /* padding: 32px 24px; */
+    box-sizing: border-box;
+    position: relative;
+    /* outline: 1px solid red; */
+}
+
+.stats-block__card-title,
+.finio-block__card-title {
+    width: 448px;
+    height: 29px;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #fff;
+    margin: 0 0 24px 0;
+}
+
+.stats-block__card-features,
+.finio-block__features {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.stats-block__icon,
+.finio-block__icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-block__card-feature,
+.finio-block__feature {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+
+    .blue-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 1024px;
+        margin: 48px auto 0 auto;
+        padding-left: 0;
+        height: auto;
+        position: static;
+    }
+
+    .blue-section__title {
+        position: static;
+        width: 808px;
+        height: auto;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 120%;
+        color: #fff;
+        text-align: left;
+        margin: 64px auto 0 auto;
+    }
+
+    .blue-section__desc {
+        position: static;
+        width: 808px;
+        height: auto;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 140%;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: left;
+        margin: 24px auto 0 auto;
+    }
+
+    .blue-section__btn {
+        position: static;
+        width: 808px;
+        height: auto;
+        padding: 0;
+        border-radius: 34px;
+        background: #fff;
+        color: #357EFE;
+        font-size: 17px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 800;
+        line-height: 140%;
+        border: none;
+        cursor: pointer;
+        margin: 32px auto 0 auto;
+    }
+
+    .report-preview-block {
+        position: relative;
+        display: flex;
+        top: auto;
+        left: auto;
+        width: 100vw;
+        max-width: 808px;
+        min-width: 320px;
+        margin: 48px auto 0 auto;
+        border-radius: 12.84px;
+        background: #fff;
+        box-shadow: 0 0 32px 0 rgba(78, 93, 124, 0.32);
+        height: 450px;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .report-preview-block__divider {
+        position: absolute;
+        left: 420px;
+        top: 0;
+        width: 2px;
+        height: 640px;
+        background: #357EFE;
+        z-index: 5;
+    }
+
+    .report-preview-block__nav {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 174px;
+        left: 400px;
+        z-index: 8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .report-preview-block__ellipse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 32px 0 rgba(78, 93, 124, 0.32);
+        opacity: 0.6;
+        z-index: 1;
+    }
+
+    .report-preview-block__image {
+        width: 52%;
+        min-width: 160px;
+        height: 100%;
+        overflow: hidden;
+        background: #fff;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .report-preview-block__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: left top;
+        display: block;
+        border-radius: 16px 0 0 16px;
+    }
+
+    .report-preview-block__chart {
+        width: 48%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 0 12.84px 12.84px 0;
+        position: relative;
+        flex-shrink: 0;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .report-preview-block__chart-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right top;
+        display: block;
+        border-radius: 0 12.84px 12.84px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .stats-block {
+        position: static;
+        width: 100%;
+        max-width: 808px;
+        height: auto;
+        margin: 54px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        background: none;
+        padding: 0;
+    }
+
+    .stats-block__card,
+    .finio-block__card {
+        width: 100%;
+        max-width: 808px;
+        min-width: 260px;
+        height: auto;
+        border-radius: 16px;
+        background: #357EFE;
+        box-shadow: 0 0 32px 0 rgba(78, 93, 124, 0.16);
+        margin: 0 auto;
+        position: static;
+    }
+
+    .finio-block__card {
+        margin: 48px auto 64px auto;
+    }
+
+    .stats-block__card-title,
+    .finio-block__card-title {
+        width: 100%;
+        height: auto;
+        font-size: 22px;
+        margin: 0 0 24px 0;
+        color: #fff;
+        text-align: left;
+    }
+
+    .features-list,
+    .stats-block__features-list,
+    .finio-block__features-list {
+        margin: 0;
+    }
+
+    .stats-block__card-features,
+    .finio-block__features {
+        gap: 8px;
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    .stats-block__icon,
+    .finio-block__icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        border-radius: 8px;
+    }
+
+    .stats-block__card-feature,
+    .finio-block__feature {
+        font-size: 16px;
+        width: auto;
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .blue-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 768px;
+        margin: 48px auto 0 auto;
+        padding-left: 0;
+        height: auto;
+        position: static;
+        outline: 2px solid blue;
+    }
+
+    .blue-section__title {
+        position: static;
+        width: 721px;
+        height: auto;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 120%;
+        color: #fff;
+        text-align: left;
+        margin: 64px auto 0 auto;
+    }
+
+    .blue-section__desc {
+        position: static;
+        width: 721px;
+        height: auto;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: left;
+        margin: 24px auto 0 auto;
+    }
+
+    .blue-section__btn {
+        position: static;
+        width: 721px;
+        height: auto;
+        padding: 0;
+        border-radius: 34px;
+        background: #fff;
+        color: #357EFE;
+        font-size: 17px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 800;
+        line-height: 140%;
+        border: none;
+        cursor: pointer;
+        margin: 32px auto 0 auto;
+    }
+
+    .report-preview-block {
+        position: relative;
+        display: flex;
+        top: auto;
+        left: auto;
+        width: 100vw;
+        max-width: 721px;
+        min-width: 320px;
+        margin: 48px auto 0 auto;
+        border-radius: 12.84px;
+        background: #fff;
+        box-shadow: 0 0 32px 0 rgba(78, 93, 124, 0.32);
+        height: 450px;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .report-preview-block__divider {
+        position: absolute;
+        left: 374px;
+        top: 0;
+        width: 2px;
+        height: 640px;
+        background: #357EFE;
+        z-index: 5;
+    }
+
+    .report-preview-block__nav {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 145px;
+        left: 354px;
+        z-index: 8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .report-preview-block__ellipse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 32px 0 rgba(78, 93, 124, 0.32);
+        opacity: 0.6;
+        z-index: 1;
+    }
+
+    .report-preview-block__image {
+        width: 52%;
+        min-width: 160px;
+        height: 100%;
+        overflow: hidden;
+        background: #fff;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .report-preview-block__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left top;
+        display: block;
+        border-radius: 16px 0 0 0;
+    }
+
+    .report-preview-block__chart {
+        width: 48%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 0 12.84px 12.84px 0;
+        position: relative;
+        flex-shrink: 0;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .report-preview-block__chart-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right top;
+        display: block;
+        border-radius: 0 12.84px 12.84px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .stats-block {
+        gap: 0;
+    }
+
+    .stats-block__card,
+    .finio-block__card {
+        width: 100%;
+        max-width: 721px;
+        min-width: 260px;
+        height: auto;
+        border-radius: 16px;
+        background: #357EFE;
+        box-shadow: 0 0 32px 0 rgba(78, 93, 124, 0.16);
+        margin: 0 auto;
+        position: static;
+    }
+
+    .finio-block__card {
+        margin: 48px auto 64px auto;
+    }
+
+    .stats-block__card-title,
+    .finio-block__card-title {
+        width: 100%;
+        height: auto;
+        font-size: 22px;
+        margin: 0 0 24px 0;
+        color: #fff;
+        text-align: left;
+    }
+
+    .features-list,
+    .stats-block__features-list,
+    .finio-block__features-list {
+        margin: 0;
+    }
+
+    .stats-block__card-features,
+    .finio-block__features {
+        gap: 8px;
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    .stats-block__icon,
+    .finio-block__icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        border-radius: 8px;
+    }
+
+    .stats-block__card-feature,
+    .finio-block__feature {
+        font-size: 16px;
+        width: auto;
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0;
+    }
+}
