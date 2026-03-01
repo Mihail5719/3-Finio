@@ -1,0 +1,312 @@
+.support-block {
+    position: absolute;
+    top: 6296px;
+    left: 264px;
+    width: 1392px;
+    height: 532px;
+    z-index: 10;
+}
+
+.support-block__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1392px;
+    height: 532px;
+    border-radius: 16px;
+    background: #357EFE;
+    z-index: 1;
+}
+
+.support-block__image {
+    position: absolute;
+    width: 623px;
+    height: 531px;
+    left: -697px;
+    top: -80px;
+    z-index: 2;
+}
+
+.support-block__content {
+    position: absolute;
+    top: 80px;
+    /* 6376-6296 */
+    left: 793px;
+    /* left: 792px; */
+    /* 1056-264 */
+    width: 520px;
+    z-index: 3;
+}
+
+.support-block__title {
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 120%;
+    color: #fff;
+    margin: 0 0 24px 0;
+    width: 444px;
+    height: 48px;
+}
+
+.support-block__desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 32px 0;
+    width: 410px;
+    height: 48px;
+}
+
+.support-block__contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.support-block__contact {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    gap: 16px;
+}
+
+.support-block__contact--telegram {
+    margin-top: 8px;
+}
+
+
+
+.support-block__contact-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.support-block__contact-icon--telegram {
+    margin-top: -3px;
+}
+
+.support-block__contact-icon--email {
+    margin-top: -8px;
+}
+
+
+.support-block__contact-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 140%;
+    color: #fff;
+}
+
+.support-block__contact-label--email {
+    margin-top: -6px;
+    margin-left: -1px;
+}
+
+.support-block__extra-desc {
+    margin: 32px 0 0 0;
+    width: 419px;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: -2px;
+}
+
+@media (max-width: 1024px) {
+
+    .support-block {
+        position: static;
+        width: 1024px;
+        max-width: 1024px;
+        min-width: 320px;
+        height: auto;
+        margin: 64px auto 0 auto;
+        border-radius: 16px;
+        background: #357EFE;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        z-index: 10;
+
+    }
+
+    .support-block__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1024px;
+        height: 100%;
+        z-index: 1;
+        background: #357EFE;
+    }
+
+    .support-block__image {
+        position: static;
+        width: 335px;
+        height: 286px;
+        max-width: 100%;
+        margin: 32px 0 0 0;
+        display: block;
+    }
+
+    .support-block__content {
+        position: static;
+        width: 100%;
+        margin: 64px 0 0 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 16px 0 108px;
+    }
+
+    .support-block__title {
+        font-size: 32px;
+        width: 100%;
+        margin: 0 0 24px 0;
+        height: auto;
+        color: #fff;
+        text-align: left;
+
+    }
+
+    .support-block__desc {
+        font-size: 17px;
+        width: 100%;
+        margin: 0 0 32px 0;
+        height: auto;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: left;
+    }
+
+    .support-block__contact-list {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .support-block__contact {
+        height: 32px;
+        gap: 16px;
+    }
+
+    .support-block__contact-label {
+        font-size: 17px;
+        color: #fff;
+    }
+
+    .support-block__extra-desc {
+        margin: 0;
+        width: 100%;
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .support-block {
+        position: static;
+        width: 768px;
+        max-width: 768px;
+        min-width: 320px;
+        height: auto;
+        margin: 64px auto 0 auto;
+        border-radius: 16px;
+        background: #357EFE;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        z-index: 10;
+    }
+
+    .support-block__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 768px;
+        height: 100%;
+        z-index: 1;
+        background: #357EFE;
+    }
+
+    .support-block__image {
+        position: static;
+        width: 335px;
+        height: 286px;
+        max-width: 100%;
+        margin: 32px 0 0 0;
+        display: block;
+    }
+
+    .support-block__content {
+        position: static;
+        width: 100%;
+        margin: 64px 0 0 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 23px 0 24px;
+    }
+
+    .support-block__title {
+        font-size: 32px;
+        width: 100%;
+        margin: 0 0 24px 0;
+        height: auto;
+        color: #fff;
+        text-align: left;
+    }
+
+    .support-block__desc {
+        font-size: 17px;
+        width: 100%;
+        margin: 0 0 32px 0;
+        height: auto;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: left;
+    }
+
+    .support-block__contact-list {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .support-block__contact {
+        height: 32px;
+        gap: 16px;
+    }
+
+    .support-block__contact--telegram {
+        margin-top: 0;
+    }
+
+    .support-block__contact-label {
+        font-size: 17px;
+        color: #fff;
+    }
+
+    .support-block__extra-desc {
+        margin: 0;
+        width: 100%;
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-left: 0;
+        text-align: left;
+    }
+
+}
